@@ -31,7 +31,7 @@
     </form>
     <hr/>
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
-    <table th:each="job: ${jobs}" >
+    <table class ="job-listing" th:each="job: ${jobs}" >
         <tr>
             <th>ID</th>
             <th th:text="${job.id}"></th>
