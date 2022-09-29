@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org/">
     <head th:replace="fragments :: head"></head>
-
+    <meta charset="UTF-8">
+    <!-- Bootstrap stylesheets and script -->
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+    <link th:href="@{/css/techjobs.css}" rel="stylesheet" />
+    <script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
     <body>
 
         <div th:replace="fragments :: page-header"></div>
@@ -19,9 +23,6 @@
             </tr>
             <tr>
                 <!-- TODO #2: Complete the View Jobs By Category Table. -->
-
-                <td></td> <!-- Feel free to remove or modify this element if necessary. -->
-
                 <td th:each="category : ${tableChoices}">
                     <ul>
                         <li th:each="item : ${category.value}">
